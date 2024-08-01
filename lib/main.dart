@@ -27,19 +27,21 @@ class Home extends StatelessWidget {
               Text('data'),
             ],
           ),
-          Container(
-            padding: EdgeInsets.all(10.0),
-            color: Colors.cyan,
-            child: Text('One'),
+          Center(
+            child: Container(
+              padding: EdgeInsets.all(10.0),
+              color: Colors.cyan,
+              child: Text('One'),
+            ),
           ),
           Container(
-            padding: EdgeInsets.all(10.0),
-            color: Colors.cyan,
+            padding: EdgeInsets.all(30.0),
+            color: Colors.blueAccent,
             child: Text('Two'),
           ),
           Container(
-            padding: EdgeInsets.all(10.0),
-            color: Colors.cyan,
+            padding: EdgeInsets.all(50.0),
+            color: Colors.pinkAccent,
             child: Text('Three'),
           ),
         ],
