@@ -17,27 +17,36 @@ class Home extends StatelessWidget {
         ),
         centerTitle: true,
         backgroundColor: Colors.blueAccent,
-
       ),
-      body: Center(
-        child: ElevatedButton.icon(
-          onPressed: () {},
-          icon: Icons.mail,
-          label: Text('Mail me'),
-        )
+      body: Row(
+        children: <Widget>[
+          Text('Rows 1'),
+          ElevatedButton(
+            onPressed: (){},
+            child: Text('Click'),
+          ),
+          Container(
+            color: Colors.cyan,
+            padding: EdgeInsets.all(30.0),
+            child: Text('GAP'),
+          )
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-
           // Your onPressed code here
         },
-        child: Icon(
-          Icons.image,
-          color: Colors.blue,
-          size: 50.0,
-        ), // Adding text inside the button
+        child: IconButton(
+          onPressed: () {
+            print('Clicked');
+          },
+          icon: Icon(
+            Icons.mail,
+            color: Colors.amber,
+          ),
+
+        ),
       ),
     );
   }
 }
-
