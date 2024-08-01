@@ -18,18 +18,30 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.blueAccent,
       ),
-      body: Row(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.end,
         children: <Widget>[
-          Text('Rows 1'),
-          ElevatedButton(
-            onPressed: (){},
-            child: Text('Click'),
+          Row(
+            children: <Widget>[
+              Text('data'),
+            ],
           ),
           Container(
+            padding: EdgeInsets.all(10.0),
             color: Colors.cyan,
-            padding: EdgeInsets.all(30.0),
-            child: Text('GAP'),
-          )
+            child: Text('One'),
+          ),
+          Container(
+            padding: EdgeInsets.all(10.0),
+            color: Colors.cyan,
+            child: Text('Two'),
+          ),
+          Container(
+            padding: EdgeInsets.all(10.0),
+            color: Colors.cyan,
+            child: Text('Three'),
+          ),
         ],
       ),
       floatingActionButton: FloatingActionButton(
