@@ -27,6 +27,16 @@ class Home extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
+            Center(
+              child: CircleAvatar(
+                backgroundImage: AssetImage('assets/neck_blast635.jpg'),
+                radius: 40.0,
+              ),
+            ),
+            Divider(
+              height: 60.0,
+              color: Colors.grey[300],
+            ),
             Text(
               'Name',
               style: TextStyle(
@@ -43,7 +53,7 @@ class Home extends StatelessWidget {
                   fontSize: 28.0,
                   fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 30.0),
+            SizedBox(height: 10.0),
             Text(
               'University',
               style: TextStyle(
@@ -53,14 +63,13 @@ class Home extends StatelessWidget {
             ),
             SizedBox(height: 1.0),
             Text(
-              'College of Information and Communication Technology',
+              'College of Information and Communication Technology,',
               style: TextStyle(
                   color: Colors.amber,
                   letterSpacing: 1.5,
                   fontSize: 20.0,
                   fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 10.0),
             Text(
               'Can Tho University',
               style: TextStyle(
@@ -77,9 +86,47 @@ class Home extends StatelessWidget {
                   color: Colors.grey[400],
                 ),
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(6.0, 0.0, 0.0, 0.0),
+                  padding: const EdgeInsets.fromLTRB(10.0, 0.0, 0.0, 0.0),
                   child: Text(
                     'lbtung271@gmail.com',
+                    style: TextStyle(
+                      color: Colors.grey[400],
+                      fontSize: 16.0,
+                    ),
+                  ),
+                )
+              ],
+            ),
+            SizedBox(height: 10.0),
+            Row(
+              children: <Widget>[
+                Icon(
+                  Icons.phone,
+                  color: Colors.grey[400],
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(10.0, 0.0, 0.0, 0.0),
+                  child: Text(
+                    '0987654321',
+                    style: TextStyle(
+                      color: Colors.grey[400],
+                      fontSize: 16.0,
+                    ),
+                  ),
+                )
+              ],
+            ),
+            SizedBox(height: 10.0),
+            Row(
+              children: <Widget>[
+                Icon(
+                  Icons.house,
+                  color: Colors.grey[400],
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(10.0, 0.0, 0.0, 0.0),
+                  child: Text(
+                    'Can Tho City',
                     style: TextStyle(
                       color: Colors.grey[400],
                       fontSize: 16.0,
