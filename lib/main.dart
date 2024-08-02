@@ -88,7 +88,7 @@ class Home extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.fromLTRB(10.0, 0.0, 0.0, 0.0),
                   child: Text(
-                    'lbtung271@gmail.com',
+                    'lbtung9999@batung.le',
                     style: TextStyle(
                       color: Colors.grey[400],
                       fontSize: 16.0,
