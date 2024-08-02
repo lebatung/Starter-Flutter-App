@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
-  home: Home(),
-));
+      home: Home(),
+    ));
 
 class Home extends StatelessWidget {
   @override
@@ -18,31 +18,33 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.blueAccent,
       ),
-      body: Column(
+      body: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.end,
         children: <Widget>[
-          Row(
-            children: <Widget>[
-              Text('data'),
-            ],
-          ),
-          Center(
+          Expanded(
+            flex: 3,
             child: Container(
               padding: EdgeInsets.all(10.0),
               color: Colors.cyan,
               child: Text('One'),
             ),
           ),
-          Container(
-            padding: EdgeInsets.all(30.0),
-            color: Colors.blueAccent,
-            child: Text('Two'),
+          Expanded(
+            flex: 2,
+            child: Container(
+              padding: EdgeInsets.all(10.0),
+              color: Colors.pinkAccent,
+              child: Text('One'),
+            ),
           ),
-          Container(
-            padding: EdgeInsets.all(50.0),
-            color: Colors.pinkAccent,
-            child: Text('Three'),
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.all(10.0),
+              color: Colors.redAccent,
+              child: Text('One'),
+            ),
           ),
         ],
       ),
@@ -58,7 +60,6 @@ class Home extends StatelessWidget {
             Icons.mail,
             color: Colors.amber,
           ),
-
         ),
       ),
     );
