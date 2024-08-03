@@ -4,8 +4,16 @@ void main() => runApp(MaterialApp(
       home: Home(),
     ));
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   const Home({super.key});
+
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -47,6 +55,23 @@ class Home extends StatelessWidget {
             SizedBox(height: 1.0),
             Text(
               'Ba Tung Le',
+              style: TextStyle(
+                  color: Colors.amber,
+                  letterSpacing: 1.5,
+                  fontSize: 28.0,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 1.0),
+            Text(
+              'Age',
+              style: TextStyle(
+                color: Colors.grey,
+                fontSize: 16.0,
+              ),
+            ),
+            SizedBox(height: 1.0),
+            Text(
+              '18',
               style: TextStyle(
                   color: Colors.amber,
                   letterSpacing: 1.5,
