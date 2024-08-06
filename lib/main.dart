@@ -32,7 +32,9 @@ class _HomeState extends State<Home> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: (){
-          age++;
+          setState(() {
+            age +=1;
+          });
         },
         child: Icon(
           Icons.add
