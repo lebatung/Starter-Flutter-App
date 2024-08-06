@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'quote.dart';
+import 'quote_card.dart';
 void main() => runApp(MaterialApp(
   home: QuoteList(),
 ));
@@ -12,12 +13,16 @@ class QuoteList extends StatefulWidget {
 
 class _QuoteListState extends State<QuoteList> {
 
-  List<String> quotes = [
-    'Imagination and fiction make up more than three quarters of our real life.',
-    'A hurtful act is the transference to others of the degradation which we bear in ourselves.',
-    'It usually takes me more than three weeks to prepare a good impromptu speech.'
+  List<Quote> quotes = [
+    Quote(text: 'Mama, just killed a man Mama, just killed a man', author: 'Ba Tung Le'),
+    Quote(text: 'Put a gun against his head, pulled my trigger, now he''s dead''', author: 'Ba Tung Le'),
+    Quote(text: 'Mama, life had just begun Mama, just killed a man', author: 'Ba Tung Le'),
+    Quote(text: 'But now I''ve gone and thrown it all away', author: 'Ba Tung Le')
   ];
 
+Widget quoteTemplate(quote){
+  return new QuoteCard(quote: quote);
+}
 
   @override
   Widget build(BuildContext context) {
@@ -31,9 +36,11 @@ class _QuoteListState extends State<QuoteList> {
         centerTitle: true,
       ),
       body: Column(
-        children: quotes.map((quote) => Text(quote)).toList(),
+        children: quotes.map((quote) => quoteTemplate(quote)).toList(),
       ),
     );
   }
 }
+
+
 
