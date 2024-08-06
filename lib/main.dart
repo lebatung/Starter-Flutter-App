@@ -13,7 +13,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
 
-
+  int age = 18;
 
   @override
   Widget build(BuildContext context) {
@@ -29,6 +29,15 @@ class _HomeState extends State<Home> {
         centerTitle: true,
         backgroundColor: Colors.grey[700],
         elevation: 0.0,
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){
+          age++;
+        },
+        child: Icon(
+          Icons.add
+        ),
+        backgroundColor: Colors.grey[500],
       ),
       body: Padding(
         padding: EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
@@ -71,7 +80,7 @@ class _HomeState extends State<Home> {
             ),
             SizedBox(height: 1.0),
             Text(
-              '18',
+              '$age',
               style: TextStyle(
                   color: Colors.amber,
                   letterSpacing: 1.5,
