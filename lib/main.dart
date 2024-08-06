@@ -18,6 +18,7 @@ class _QuoteListState extends State<QuoteList> {
     'It usually takes me more than three weeks to prepare a good impromptu speech.'
   ];
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,9 +31,7 @@ class _QuoteListState extends State<QuoteList> {
         centerTitle: true,
       ),
       body: Column(
-        children: quotes.map((quote){
-          return Text(quote);
-        }).toList(),
+        children: quotes.map((quote) => Text(quote)).toList(),
       ),
     );
   }
