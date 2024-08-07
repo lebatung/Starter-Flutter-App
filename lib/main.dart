@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'quote.dart';
 import 'quote_card.dart';
+
 void main() => runApp(MaterialApp(
-  home: QuoteList(),
-));
+      home: QuoteList(),
+    ));
+
 class QuoteList extends StatefulWidget {
   const QuoteList({super.key});
 
@@ -12,17 +14,21 @@ class QuoteList extends StatefulWidget {
 }
 
 class _QuoteListState extends State<QuoteList> {
-
   List<Quote> quotes = [
-    Quote(text: 'Mama, just killed a man Mama, just killed a man', author: 'Ba Tung Le'),
-    Quote(text: 'Put a gun against his head, pulled my trigger, now he''s dead''', author: 'Ba Tung Le'),
-    Quote(text: 'Mama, life had just begun Mama, just killed a man', author: 'Ba Tung Le'),
-    Quote(text: 'But now I''ve gone and thrown it all away', author: 'Ba Tung Le')
+    Quote(
+        text: 'Mama, just killed a man Mama, just killed a man',
+        author: 'Ba Tung Le'),
+    Quote(
+        text:
+            'Put a gun against his head, pulled my trigger, now he' 's dead' '',
+        author: 'Ba Tung Le'),
+    Quote(
+        text: 'Mama, life had just begun Mama, just killed a man',
+        author: 'Ba Tung Le'),
+    Quote(
+        text: 'But now I' 've gone and thrown it all away it all away',
+        author: 'Ba Tung Le')
   ];
-
-Widget quoteTemplate(quote){
-  return new QuoteCard(quote: quote);
-}
 
   @override
   Widget build(BuildContext context) {
@@ -36,11 +42,15 @@ Widget quoteTemplate(quote){
         centerTitle: true,
       ),
       body: Column(
-        children: quotes.map((quote) => quoteTemplate(quote)).toList(),
+        children: quotes.map((quote) => QuoteCard(
+          quote: quote,
+          delete: (){
+            setState(() {
+              quotes.remove(quote);
+            });
+          },
+        )).toList(),
       ),
     );
   }
 }
-
-
-
